@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+module.exports = function handler(req, res) {
   const produtos = {
   "7894900010017": {
     nome: "Leite Integral 1L",
@@ -71,8 +71,14 @@ export default function handler(req, res) {
 };
 
   const { codigo } = req.query;
+  // Only allow GET for this endpoint (frontend uses GET)
+  if (req.method && req.method !== "GET") {
+    res.status(405).json({ erro: "Método não permitido" });
+    return;
+  }
+
   const produto = produtos[codigo];
 
   if (produto) res.status(200).json(produto);
   else res.status(404).json({ erro: "Produto não encontrado" });
-}
+};

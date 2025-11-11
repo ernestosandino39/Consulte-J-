@@ -9,7 +9,7 @@ function LeitorFisico() {
   const buscarProduto = async (valor) => {
     if (!valor) return; 
     try {
-     const res = await fetch(`/api/produtos?codigo=${valor}`);
+     const res = await fetch(`http://localhost:4000/api/produtos/${valor}`);
       if (!res.ok) throw new Error("Produto não encontrado");
       const data = await res.json();
       setProduto(data); 
