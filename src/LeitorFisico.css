@@ -1,0 +1,137 @@
+/* LeitorFisico.css — futurista esticado e posicionado mais abaixo */
+
+.leitor-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 120px auto 60px auto; /* empurra o componente para baixo */
+  background: rgba(10, 10, 25, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2),
+              inset 0 0 15px rgba(0, 255, 255, 0.1);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.titulo {
+  color: #00ffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  margin-bottom: 25px;
+}
+
+.input-codigo {
+  width: 80%;
+  max-width: 600px;
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: rgba(0, 255, 255, 0.08);
+  color: #00ffff;
+  text-align: center;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.input-codigo:focus {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Mensagem de erro */
+.erro {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Card do produto */
+.card-produto {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(15, 15, 40, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  padding: 30px;
+  text-align: center;
+  color: #e0ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produto:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+}
+
+/* Imagem do produto */
+.imagem-produto {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Nome e descrição */
+.card-produto h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+.card-produto p {
+  font-size: 1.1rem;
+  color: #a8faff;
+  margin-bottom: 8px;
+}
+
+/* Preço com destaque neon */
+.preco {
+  font-size: 1.4rem;
+  color: #00ffff;
+  font-weight: bold;
+  margin-top: 15px;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .leitor-container {
+    width: 95%;
+    margin-top: 60px; /* menos espaço no mobile */
+    padding: 25px 15px;
+  }
+
+  .input-codigo {
+    width: 95%;
+  }
+
+  .card-produto {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .imagem-produto {
+    width: 150px;
+    height: 150px;
+  }
+   h1 {
+  font-size: 2rem;
+  color: #00e6ff;
+  text-shadow: 0 0 10px #00e6ff, 0 0 20px #0088ff;
+  margin-bottom: 30px;
+}
+
+}
